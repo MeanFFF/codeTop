@@ -30,9 +30,7 @@ public class KthLargestElementInAnArray215 {
         if (nums.length == 1) {
             return nums[0];
         }
-        /*
-        从第一个非叶子节点开始调节，将最大元素移动到堆顶
-         */
+        // 从第一个非叶子节点开始调节，将最大元素移动到堆顶
         for (int n = nums.length / 2 - 1; n >= 0; n--) {
             sink(nums, n, nums.length);
         }
